@@ -2,56 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hades THC - Un paso más</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: black;
-      color: white;
-    }
-    header {
-      text-align: center;
-      padding: 3rem 1rem 1rem;
-    }
-    header img {
-      height: 9cm;
-    }
-    h1 {
-      font-family: 'UnifrakturCook', cursive;
-      color: red;
-      font-size: 3rem;
-      margin: 0.5rem 0;
-    }
-    .btn-main {
-      background: white;
-      color: black;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .section {
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    .spotify {
-      max-width: 600px;
-      margin: 2rem auto;
-    }
-    .merch-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .merch-grid img {
-      width: 200px;
-      border-radius: 1rem;
-    }
     .floating-buttons {
       position: fixed;
       top: 50%;
@@ -63,88 +17,303 @@
       z-index: 1000;
     }
     .floating-buttons a {
-      background: red;
+      background: #ff0000;
+      color: white;
+      padding: 0.5rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 0 8px 8px 0;
+      font-family: Arial, sans-serif;
+    }
+    .floating-buttons a:hover {
+      background: white;
+      color: #000;
+    }
+    
+.logo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 35px red, 0 0 60px red;
+  animation: appear 1.5s ease-out forwards;
+  opacity: 0;
+  margin-bottom: 1rem;
+}
+@keyframes appear {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+      width: 180px;
+      height: 180px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 20px red;
+      transition: box-shadow 0.3s ease;
+    }
+    .logo:hover {
+      box-shadow: 0 0 35px #ff0000, 0 0 60px #ff0000;
+    }
+
+    body {
+      background-color: #000;
+      color: white;
+      font-family: 'UnifrakturCook', cursive;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 2rem 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #ff0000;
+      margin: 0.5rem 0;
+    }
+    .subtext {
+      font-size: 1.2rem;
+      font-family: Arial, sans-serif;
+      color: #ccc;
+    }
+    button {
+      background: #ff0000;
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 1.5rem 0;
+      font-family: Arial, sans-serif;
+    }
+    
+.logo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 35px red, 0 0 60px red;
+  animation: appear 1.5s ease-out forwards;
+  opacity: 0;
+  margin-bottom: 1rem;
+}
+@keyframes appear {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+      width: 180px;
+      height: 180px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .spotify-player, .last-release {
+      margin: 2rem auto;
+      max-width: 800px;
+      width: 90%;
+    }
+    .merch-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      max-width: 1000px;
+      padding: 0 1rem;
+    }
+    .merch-gallery img {
+      width: 100%;
+      max-width: 250px;
+      border: 2px solid #ff0000;
+      border-radius: 12px;
+    }
+    .social-links, .comments, .merch-button {
+      margin: 3rem 0 2rem;
+      padding: 0 1rem;
+    }
+    .social-links a, .merch-button a {
+      display: inline-block;
+      margin: 0.5rem;
       color: white;
       text-decoration: none;
-      padding: 0.6rem;
-      font-weight: bold;
-      border-radius: 0 10px 10px 0;
+      font-size: 1.2rem;
+      font-family: Arial, sans-serif;
     }
-    form {
+    .merch-button a {
+      padding: 0.8rem 1.5rem;
+      background-color: #ff0000;
+      border-radius: 8px;
+    }
+    .social-links a:hover, .merch-button a:hover {
+      text-decoration: underline;
+    }
+    .comments form {
       max-width: 500px;
-      margin: auto;
+      margin: 0 auto;
     }
-    input, button {
+    .comments textarea {
       width: 100%;
-      padding: 0.8rem;
-      margin: 0.5rem 0;
-      border-radius: 10px;
+      padding: 1rem;
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
       border: none;
     }
-    footer {
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
+    .comments input[type="submit"] {
+      background-color: #ff0000;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+      .merch-gallery {
+        gap: 0.8rem;
+      }
+      .merch-gallery img {
+        max-width: 100%;
+      }
+      .social-links a, .merch-button a {
+        font-size: 1rem;
+        margin: 0.4rem;
+      }
+      
+.logo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 35px red, 0 0 60px red;
+  animation: appear 1.5s ease-out forwards;
+  opacity: 0;
+  margin-bottom: 1rem;
+}
+@keyframes appear {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+      width: 180px;
+      height: 180px;
+        width: 90px;
+        height: 90px;
+      }
     }
   </style>
 </head>
 <body>
+
+<!-- particles.js container -->
+<div id="particles-js" style="position:fixed;width:100%;height:100%;z-index:-1;"></div>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 80 },
+    "color": { "value": "#ff0000" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.4 },
+    "size": { "value": 3 },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ff0000",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "none"
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": { "enable": true, "mode": "repulse" },
+      "onclick": { "enable": true, "mode": "push" }
+    },
+    "modes": {
+      "repulse": { "distance": 100 },
+      "push": { "particles_nb": 4 }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+
   <div class="floating-buttons">
-    <a href="https://open.spotify.com/artist/4RgDShxPrbB9M3BoX4uOyc" target="_blank">🎵 Spotify</a>
+    <a href="https://open.spotify.com/artist/4SB8tCKK3hj8zvmn8N5zvO" target="_blank">🎵 Spotify</a>
     <a href="https://www.instagram.com/hades.thc/" target="_blank">📸 Instagram</a>
     <a href="https://www.youtube.com/@hadesthc369" target="_blank">▶️ YouTube</a>
   </div>
-
   <header>
-    <img src="assets/img/logo.png" alt="Logo Hades THC" />
+    <img src="assets/img/logo.png" alt="Logo Hades THC" class="logo" />
     <h1>Hades THC</h1>
-    <p>Explora mi mundo: música, merch y emociones reales. Cada letra tiene historia.</p>
-    <a class="btn-main" href="#merch">Explorar mi mundo</a>
+    <h1>369</h1>
+    <h1>Un paso más</h1>
+    <p class="subtext">Explora mi mundo: música, merch y emociones reales. Cada letra tiene historia.</p>
+    <button onclick="window.location.href='https://open.spotify.com/artist/4SB8tCKK3hj8zvmn8N5zvO'">Explorar mi mundo</button>
   </header>
 
-  <section class="section">
-    <h2>Sobre mí</h2>
-    <p>Soy un artista independiente. Mi música nace de vivencias, emociones intensas y catarsis creativa. Hago rap, R&B, reggaetón y más.</p>
-  </section>
+  <div class="spotify-player">
+    <h2>Mi canción destacada</h2>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7lYpukPIr6rmEnr6akxNY7?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
 
-  <section class="section spotify">
+  <div class="last-release">
+    <h2>Último lanzamiento</h2>
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0tlnzKPEMBIepJxRspaZt5?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </section>
+  </div>
 
-  <section class="section" id="merch">
-    <h2>Mi merch</h2>
-    <div class="merch-grid">
-      <img src="merch/merch1.png" alt="Merch 1" />
-      <img src="merch/merch2.png" alt="Merch 2" />
-      <img src="merch/merch3.png" alt="Merch 3" />
-      <img src="merch/merch4.jpg" alt="Merch 4" />
-      <img src="merch/merch5.png" alt="Merch 5" />
+  <div class="last-release">
+    <h2>Video más reciente</h2>
+    <iframe width="100%" height="352" style="border-radius:12px" src="https://www.youtube.com/embed/j3sqkxjQSlg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  
+
+  <div class="comments">
+    <h2>Déjame un comentario</h2>
+    <form>
+      <textarea rows="5" placeholder="Escribe algo..."></textarea>
+      <br>
+      <input type="submit" value="Enviar" />
+    </form>
+  </div>
+
+  
+  <section style="margin-top: 4rem;">
+    <h2>Mi colección de merch</h2>
+    <div class="merch-gallery">
+      <img src="assets/img/merch1.png" alt="Merch 1">
+      <img src="assets/img/merch2.png" alt="Merch 2">
+      <img src="assets/img/merch3.png" alt="Merch 3">
+      <img src="assets/img/merch4.jpg" alt="Merch 4">
+      <img src="assets/img/merch5.png" alt="Merch 5">
+    </div>
+    <div class="merch-button">
+      <a href="https://www.instagram.com/369_clothes/" target="_blank">Ver más merch</a>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Mi Linktree</h2>
-    <a href="https://linktr.ee/hadesthc" target="_blank" class="btn-main">Ir al Linktree</a>
-  </section>
-
-  <section class="section">
-    <h2>Suscríbete a mi lista exclusiva</h2>
-    <p>Recibe adelantos de mis canciones, ofertas de merch y lanzamientos antes que nadie.</p>
-    <form action="https://formsubmit.co/ecastilo1008@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo" required>
-      <input type="hidden" name="_captcha" value="false">
-      <button type="submit">Suscribirme</button>
-    </form>
-  </section>
-
-  <section class="section">
-    <h2>Déjame un comentario</h2>
-    <textarea placeholder="Escribe algo..." rows="5" style="width:100%; max-width:600px; border-radius:10px; padding:1rem;"></textarea>
-  </section>
-
-  <footer>
-    &copy; 2025 Hades THC. Todos los derechos reservados.
+  <footer class="social-links">
+    <a href="https://www.instagram.com/hades.thc/" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@hadesthc?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
+    <a href="https://www.youtube.com/@hadesTHC" target="_blank">YouTube</a>
   </footer>
 </body>
 </html>
