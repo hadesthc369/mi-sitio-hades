@@ -2,63 +2,56 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hades THC - Un paso más</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      background-color: black;
       font-family: Arial, sans-serif;
+      background: black;
       color: white;
-      overflow-x: hidden;
     }
-
     header {
       text-align: center;
-      padding: 2rem;
+      padding: 3rem 1rem 1rem;
     }
-
     header img {
-      width: 9cm;
-      height: auto;
-      border-radius: 50%;
-      box-shadow: 0 0 20px red;
+      height: 9cm;
     }
-
     h1 {
       font-family: 'UnifrakturCook', cursive;
-      font-size: 2.5rem;
       color: red;
+      font-size: 3rem;
+      margin: 0.5rem 0;
     }
-
-    h2 {
-      font-family: 'UnifrakturCook', cursive;
-    }
-
-    .main-btn {
-      background: red;
-      color: white;
+    .btn-main {
+      background: white;
+      color: black;
+      padding: 0.75rem 1.5rem;
       border: none;
-      padding: 1rem 2rem;
-      border-radius: 30px;
-      font-size: 1rem;
+      border-radius: 1rem;
+      font-weight: bold;
       cursor: pointer;
-      margin-top: 1rem;
     }
-
     .section {
+      padding: 3rem 2rem;
       text-align: center;
-      padding: 3rem 1rem;
     }
-
-    .spotify-embed iframe {
-      width: 100%;
+    .spotify {
       max-width: 600px;
-      height: 352px;
-      border-radius: 12px;
+      margin: 2rem auto;
     }
-
+    .merch-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .merch-grid img {
+      width: 200px;
+      border-radius: 1rem;
+    }
     .floating-buttons {
       position: fixed;
       top: 50%;
@@ -69,53 +62,35 @@
       gap: 10px;
       z-index: 1000;
     }
-
     .floating-buttons a {
-      background: #ff0000;
+      background: red;
       color: white;
-      padding: 0.8rem 1rem;
       text-decoration: none;
+      padding: 0.6rem;
       font-weight: bold;
       border-radius: 0 10px 10px 0;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
     }
-
-    .comment-box {
-      width: 90%;
-      max-width: 600px;
-      height: 100px;
-      padding: 1rem;
-      font-size: 1rem;
-      border-radius: 8px;
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+    input, button {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border-radius: 10px;
       border: none;
-      resize: vertical;
-      margin-top: 1rem;
     }
-
     footer {
+      padding: 2rem;
       text-align: center;
-      margin-top: 3rem;
       font-size: 0.9rem;
-      color: #aaa;
-    }
-
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: -1;
     }
   </style>
 </head>
 <body>
-  <canvas id="particles"></canvas>
-
   <div class="floating-buttons">
-    <a href="https://open.spotify.com/artist/4vE6gMImXshn6bW8Y9U1cf" target="_blank">🎵 Spotify</a>
+    <a href="https://open.spotify.com/artist/4RgDShxPrbB9M3BoX4uOyc" target="_blank">🎵 Spotify</a>
     <a href="https://www.instagram.com/hades.thc/" target="_blank">📸 Instagram</a>
     <a href="https://www.youtube.com/@hadesthc369" target="_blank">▶️ YouTube</a>
   </div>
@@ -124,85 +99,52 @@
     <img src="logo.png" alt="Logo Hades THC" />
     <h1>Hades THC</h1>
     <p>Explora mi mundo: música, merch y emociones reales. Cada letra tiene historia.</p>
-    <button class="main-btn">Explorar mi mundo</button>
+    <a class="btn-main" href="#merch">Explorar mi mundo</a>
   </header>
 
   <section class="section">
-    <h2>Mi último lanzamiento</h2>
-    <div class="spotify-embed">
-      <iframe src="https://open.spotify.com/embed/album/0tlnzKPEMBIepJxRspaZt5?utm_source=generator" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <h2>Sobre mí</h2>
+    <p>Soy un artista independiente. Mi música nace de vivencias, emociones intensas y catarsis creativa. Hago rap, R&B, reggaetón y más.</p>
+  </section>
+
+  <section class="section spotify">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0tlnzKPEMBIepJxRspaZt5?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </section>
+
+  <section class="section" id="merch">
+    <h2>Mi merch</h2>
+    <div class="merch-grid">
+      <img src="merch/merch1.png" alt="Merch 1" />
+      <img src="merch/merch2.png" alt="Merch 2" />
+      <img src="merch/merch3.png" alt="Merch 3" />
+      <img src="merch/merch4.jpg" alt="Merch 4" />
+      <img src="merch/merch5.png" alt="Merch 5" />
     </div>
   </section>
 
   <section class="section">
+    <h2>Mi Linktree</h2>
+    <a href="https://linktr.ee/hadesthc" target="_blank" class="btn-main">Ir al Linktree</a>
+  </section>
+
+  <section class="section">
     <h2>Suscríbete a mi lista exclusiva</h2>
-    <form action="https://formsubmit.co/ecastilo1008@gmail.com" method="POST" style="max-width:500px; margin:0 auto;">
-      <input type="text" name="name" placeholder="Tu nombre" required style="width:100%; padding: 0.8rem; margin: 0.5rem 0;"><br>
-      <input type="email" name="email" placeholder="Tu correo" required style="width:100%; padding: 0.8rem; margin: 0.5rem 0;"><br>
-      <button type="submit" style="background-color: #ff0000; color: white; padding: 0.8rem 2rem; border: none; border-radius: 8px;">Unirme</button>
+    <p>Recibe adelantos de mis canciones, ofertas de merch y lanzamientos antes que nadie.</p>
+    <form action="https://formsubmit.co/ecastilo1008@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Suscribirme</button>
     </form>
   </section>
 
   <section class="section">
-    <h2>Explora más en mi Linktree</h2>
-    <iframe src="https://linktr.ee/hadesthc" width="100%" height="400" style="border:none; border-radius:12px; max-width:600px;"></iframe>
-  </section>
-
-  <section class="section">
     <h2>Déjame un comentario</h2>
-    <textarea class="comment-box" placeholder="Escribe algo..."></textarea>
+    <textarea placeholder="Escribe algo..." rows="5" style="width:100%; max-width:600px; border-radius:10px; padding:1rem;"></textarea>
   </section>
 
   <footer>
-    <p>&copy; 2025 Hades THC. Todos los derechos reservados.</p>
+    &copy; 2025 Hades THC. Todos los derechos reservados.
   </footer>
-
-  <script>
-    // Partículas simples
-    const canvas = document.getElementById('particles');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-
-    function createParticles() {
-      particles = [];
-      for (let i = 0; i < 80; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          radius: Math.random() * 2 + 1,
-          dx: Math.random() * 0.5 - 0.25,
-          dy: Math.random() * 0.5 - 0.25,
-        });
-      }
-    }
-
-    function drawParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = 'red';
-      particles.forEach(p => {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fill();
-        p.x += p.dx;
-        p.y += p.dy;
-        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
-        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
-      });
-      requestAnimationFrame(drawParticles);
-    }
-
-    resizeCanvas();
-    createParticles();
-    drawParticles();
-    window.addEventListener('resize', () => {
-      resizeCanvas();
-      createParticles();
-    });
-  </script>
 </body>
 </html>
