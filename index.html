@@ -1,155 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hades THC | Un paso más</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hades THC | Un paso más</title>
 
-    <!-- Partículas flotantes -->
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
-    <script>
-      window.onload = () => {
-        tsParticles.load("tsparticles", {
-          fullScreen: { enable: true, zIndex: -1 },
-          particles: {
-            number: { value: 180 },
-            color: { value: "#ff0000" },
-            shape: { type: "circle" },
-            opacity: { value: 0.1 },
-            size: { value: 2 },
-            move: { enable: true, speed: 0.3 }
-          },
-          background: { color: "#000000" }
-        });
-      };
-    </script>
+  <!-- Partículas -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script>
+    window.onload = () => {
+      tsParticles.load("tsparticles", {
+        fullScreen: { enable: true, zIndex: 0 },
+        particles: {
+          number: { value: 180 },
+          color: { value: "#ff0000" },
+          shape: { type: "circle" },
+          opacity: { value: 0.1 },
+          size: { value: 2 },
+          move: { enable: true, speed: 0.3 }
+        },
+        background: { color: "#000000" }
+      });
+    };
+  </script>
 
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+  <!-- Estilos -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 
-      body {
-        margin: 0;
-        font-family: sans-serif;
-        background-color: #000;
-        color: white;
-        text-align: center;
-        padding: 2rem;
-      }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
 
-      #tsparticles {
-        pointer-events: none; /* ✅ Esto permite que los clics funcionen */
-      }
+    #tsparticles {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
 
-      img.logo {
-        width: 180px;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 3px solid #fff;
-        box-shadow: 0 0 20px red;
-        margin-bottom: 1.5rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
+    main {
+      position: relative;
+      z-index: 1;
+    }
 
-      img.logo:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px red;
-      }
+    img.logo {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 20px red;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-      h1 {
-        font-family: 'UnifrakturCook', cursive;
-        color: red;
-        font-size: 2.5rem;
-        margin-bottom: 0.2rem;
-      }
+    img.logo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px red;
+    }
 
-      .btn {
-        display: inline-block;
-        margin: 1rem;
-        padding: 0.75rem 1.5rem;
-        border-radius: 30px;
-        font-weight: bold;
-        text-decoration: none;
-        color: black;
-        background: white;
-        box-shadow: 0 0 15px rgba(255,255,255,0.3);
-        transition: all 0.3s ease;
-      }
+    h1 {
+      font-family: 'UnifrakturCook', cursive;
+      color: red;
+      font-size: 2.5rem;
+      margin-bottom: 0.2rem;
+    }
 
-      .section {
-        background: rgba(255,255,255,0.05);
-        border-radius: 16px;
-        padding: 2rem;
-        margin: 2rem auto;
-        width: 90%;
-        max-width: 700px;
-        box-shadow: 0 0 25px rgba(255,0,0,0.1);
-      }
+    .btn {
+      display: inline-block;
+      margin: 1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+      background: white;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      transition: all 0.3s ease;
+    }
 
-      .section h2 {
-        font-size: 1.8rem;
-        color: #fff;
-      }
+    .section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 0 25px rgba(255,0,0,0.1);
+    }
 
-      .section p {
-        font-size: 1rem;
-        color: #ccc;
-      }
+    .section h2 {
+      font-size: 1.8rem;
+      color: #fff;
+    }
 
-      .cover, .merch-img {
-        width: 100%;
-        max-width: 300px;
-        margin: 1rem auto;
-        display: block;
-        border-radius: 12px;
-        box-shadow: 0 0 25px red;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
+    .section p {
+      font-size: 1rem;
+      color: #ccc;
+    }
 
-      .merch-img:hover, .cover:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
-      }
+    .cover, .merch-img {
+      width: 100%;
+      max-width: 300px;
+      margin: 1rem auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 0 25px red;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-      iframe {
-        margin-top: 1.5rem;
-        border-radius: 12px;
-        box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
-        width: 100%;
-        max-width: 600px;
-        height: 300px;
-      }
+    .merch-img:hover, .cover:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+    }
 
-      .comments {
-        margin-top: 1rem;
-        font-style: italic;
-        color: #999;
-      }
+    iframe {
+      margin-top: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+    }
 
-      .socials a {
-        display: inline-block;
-        margin: 0.5rem;
-        color: white;
-        text-decoration: none;
-        font-size: 1rem;
-        transition: 0.3s;
-      }
+    .comments {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #999;
+    }
 
-      .socials a:hover {
-        color: red;
-      }
+    .socials a {
+      display: inline-block;
+      margin: 0.5rem;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
 
-      footer {
-        margin-top: 3rem;
-        font-size: 0.8rem;
-        color: #444;
-      }
-    </style>
-  </head>
+    .socials a:hover {
+      color: red;
+    }
 
-  <body>
-    <div id="tsparticles"></div>
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #444;
+    }
+  </style>
+</head>
 
+<body>
+  <div id="tsparticles"></div>
+
+  <main>
     <img src="logo.png" alt="Hades THC Logo" class="logo" />
     <h1>Hades THC</h1>
     <p>Explora mi mundo: música, merch y emociones reales. Cada letra tiene historia.</p>
@@ -194,18 +204,19 @@
     <footer>
       © 2025 Hades THC — Todos los derechos reservados.
     </footer>
+  </main>
 
-    <!-- Scroll suave -->
-    <script>
-      document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
+  <!-- Scroll suave -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>
