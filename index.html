@@ -9,9 +9,8 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
-      line-height: 1.6;
+      background: black;
+      color: white;
     }
     header {
       text-align: center;
@@ -19,30 +18,21 @@
     }
     header img {
       height: 9cm;
-      max-width: 100%;
-      object-fit: contain;
     }
     h1 {
       font-family: 'UnifrakturCook', cursive;
-      color: #ff0000;
+      color: red;
       font-size: 3rem;
       margin: 0.5rem 0;
     }
     .btn-main {
-      background: #fff;
-      color: #000;
+      background: white;
+      color: black;
       padding: 0.75rem 1.5rem;
       border: none;
       border-radius: 1rem;
       font-weight: bold;
       cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.3s, color 0.3s;
-    }
-    .btn-main:hover {
-      background: #ff0000;
-      color: #fff;
     }
     .section {
       padding: 3rem 2rem;
@@ -61,7 +51,6 @@
     .merch-grid img {
       width: 200px;
       border-radius: 1rem;
-      object-fit: cover;
     }
     .floating-buttons {
       position: fixed;
@@ -74,108 +63,88 @@
       z-index: 1000;
     }
     .floating-buttons a {
-      background: #ff0000;
-      color: #fff;
+      background: red;
+      color: white;
       text-decoration: none;
       padding: 0.6rem;
       font-weight: bold;
       border-radius: 0 10px 10px 0;
-      transition: background 0.3s;
-    }
-    .floating-buttons a:hover {
-      background: #fff;
-      color: #000;
     }
     form {
       max-width: 500px;
       margin: auto;
     }
-    input, button, textarea {
+    input, button {
       width: 100%;
       padding: 0.8rem;
       margin: 0.5rem 0;
       border-radius: 10px;
       border: none;
-      box-sizing: border-box;
-      font-size: 1rem;
-    }
-    textarea {
-      resize: vertical;
     }
     footer {
       padding: 2rem;
       text-align: center;
       font-size: 0.9rem;
-      background: #111;
-    }
-    footer a {
-      color: #ff0000;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="floating-buttons" aria-label="Redes sociales">
-    <a href="https://open.spotify.com/artist/4RgDShxPrbB9M3BoX4uOyc" target="_blank" rel="noopener noreferrer">🎵 Spotify</a>
-    <a href="https://www.instagram.com/hades.thc/" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
-    <a href="https://www.youtube.com/@hadesthc369" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+  <div class="floating-buttons">
+    <a href="https://open.spotify.com/artist/4RgDShxPrbB9M3BoX4uOyc" target="_blank">🎵 Spotify</a>
+    <a href="https://www.instagram.com/hades.thc/" target="_blank">📸 Instagram</a>
+    <a href="https://www.youtube.com/@hadesthc369" target="_blank">▶️ YouTube</a>
   </div>
 
   <header>
-    <img src="logo.png" alt="Logo de Hades THC" />
+    <img src="assets/img/logo.png" alt="Logo Hades THC" />
     <h1>Hades THC</h1>
     <p>Explora mi mundo: música, merch y emociones reales. Cada letra tiene historia.</p>
     <a class="btn-main" href="#merch">Explorar mi mundo</a>
   </header>
 
-  <main>
-    <section class="section">
-      <h2>Sobre mí</h2>
-      <p>Soy un artista independiente. Mi música nace de vivencias, emociones intensas y catarsis creativa. Hago rap, R&B, reggaetón y más.</p>
-    </section>
+  <section class="section">
+    <h2>Sobre mí</h2>
+    <p>Soy un artista independiente. Mi música nace de vivencias, emociones intensas y catarsis creativa. Hago rap, R&B, reggaetón y más.</p>
+  </section>
 
-    <section class="section spotify">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0tlnzKPEMBIepJxRspaZt5?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Reproductor de Spotify"></iframe>
-    </section>
+  <section class="section spotify">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0tlnzKPEMBIepJxRspaZt5?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </section>
 
-    <section class="section" id="merch">
-      <h2>Mi merch</h2>
-      <div class="merch-grid" aria-label="Galería de productos">
-        <img src="merch/merch1.png" alt="Merch 1" />
-        <img src="merch/merch2.png" alt="Merch 2" />
-        <img src="merch/merch3.png" alt="Merch 3" />
-        <img src="merch/merch4.jpg" alt="Merch 4" />
-        <img src="merch/merch5.png" alt="Merch 5" />
-      </div>
-    </section>
+  <section class="section" id="merch">
+    <h2>Mi merch</h2>
+    <div class="merch-grid">
+      <img src="merch/merch1.png" alt="Merch 1" />
+      <img src="merch/merch2.png" alt="Merch 2" />
+      <img src="merch/merch3.png" alt="Merch 3" />
+      <img src="merch/merch4.jpg" alt="Merch 4" />
+      <img src="merch/merch5.png" alt="Merch 5" />
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>Mi Linktree</h2>
-      <a href="https://linktr.ee/hadesthc" target="_blank" rel="noopener noreferrer" class="btn-main">Ir al Linktree</a>
-    </section>
+  <section class="section">
+    <h2>Mi Linktree</h2>
+    <a href="https://linktr.ee/hadesthc" target="_blank" class="btn-main">Ir al Linktree</a>
+  </section>
 
-    <section class="section">
-      <h2>Suscríbete a mi lista exclusiva</h2>
-      <p>Recibe adelantos de mis canciones, ofertas de merch y lanzamientos antes que nadie.</p>
-      <form action="https://formsubmit.co/ecastilo1008@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Tu nombre" required aria-label="Tu nombre">
-        <input type="email" name="email" placeholder="Tu correo" required aria-label="Tu correo">
-        <input type="hidden" name="_captcha" value="false">
-        <button type="submit">Suscribirme</button>
-      </form>
-    </section>
+  <section class="section">
+    <h2>Suscríbete a mi lista exclusiva</h2>
+    <p>Recibe adelantos de mis canciones, ofertas de merch y lanzamientos antes que nadie.</p>
+    <form action="https://formsubmit.co/ecastilo1008@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
 
-    <section class="section">
-      <h2>Déjame un comentario</h2>
-      <textarea placeholder="Escribe algo..." rows="5" style="width:100%; max-width:600px;" aria-label="Escribe un comentario"></textarea>
-    </section>
-  </main>
+  <section class="section">
+    <h2>Déjame un comentario</h2>
+    <textarea placeholder="Escribe algo..." rows="5" style="width:100%; max-width:600px; border-radius:10px; padding:1rem;"></textarea>
+  </section>
 
   <footer>
-    &copy; 2025 Hades THC. Todos los derechos reservados. <a href="#top">Volver arriba</a>
+    &copy; 2025 Hades THC. Todos los derechos reservados.
   </footer>
 </body>
 </html>
