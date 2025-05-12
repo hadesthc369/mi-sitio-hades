@@ -12,8 +12,8 @@
         tsParticles.load("tsparticles", {
           fullScreen: { enable: true, zIndex: -1 },
           particles: {
-            number: { value: 60 },
-            color: { value: "#ffffff" },
+            number: { value: 180 },
+            color: { value: "#ff0000" },
             shape: { type: "circle" },
             opacity: { value: 0.1 },
             size: { value: 2 },
@@ -34,6 +34,10 @@
         color: white;
         text-align: center;
         padding: 2rem;
+      }
+
+      #tsparticles {
+        pointer-events: none; /* ✅ Esto permite que los clics funcionen */
       }
 
       img.logo {
@@ -150,10 +154,8 @@
     <h1>Hades THC</h1>
     <p>Explora mi mundo: música, merch y emociones reales. Cada letra tiene historia.</p>
 
-    <!-- Botón con scroll suave -->
     <a href="#spotify" class="btn">Explorar mi mundo</a>
 
-    <!-- Secciones -->
     <div class="section">
       <h2>Sobre mí</h2>
       <p>Soy un artista independiente. Mi música nace de vivencias, emociones intensas y catarsis creativa. Hago rap, R&B, reggaetón y más.</p>
@@ -164,12 +166,10 @@
       <p>Escucha <span style="color:#ff8080;">mi nueva canción "B.M.B.A."</span>.</p>
       <img src="bmba.jpg" alt="Portada del track" class="cover" />
 
-      <!-- Spotify embed -->
       <div id="spotify">
         <iframe src="https://open.spotify.com/embed/track/2TpxZ7JUBn3uw46aR7qd6V?utm_source=generator&theme=0" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
 
-      <!-- YouTube embed -->
       <iframe src="https://www.youtube.com/embed/1jxSxLIGsAA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
