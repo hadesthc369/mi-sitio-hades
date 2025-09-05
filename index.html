@@ -79,40 +79,9 @@
       max-width: 800px;
       width: 90%;
     }
-    .merch-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin: 2rem auto;
-      max-width: 1000px;
-      padding: 0 1rem;
-    }
-    .merch-gallery img {
-      width: 100%;
-      max-width: 250px;
-      border: 2px solid #ff0000;
-      border-radius: 12px;
-    }
-    .social-links, .comments, .merch-button {
+    .comments {
       margin: 3rem 0 2rem;
       padding: 0 1rem;
-    }
-    .social-links a, .merch-button a {
-      display: inline-block;
-      margin: 0.5rem;
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-family: Arial, sans-serif;
-    }
-    .merch-button a {
-      padding: 0.8rem 1.5rem;
-      background-color: #ff0000;
-      border-radius: 8px;
-    }
-    .social-links a:hover, .merch-button a:hover {
-      text-decoration: underline;
     }
     .comments form {
       max-width: 500px;
@@ -136,10 +105,26 @@
       font-family: Arial, sans-serif;
       cursor: pointer;
     }
+    .social-links {
+      margin: 3rem 0 2rem;
+      padding: 0 1rem;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 0.5rem;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-family: Arial, sans-serif;
+    }
+    .social-links a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
+<!-- particles.js container -->
 <div id="particles-js" style="position:fixed;width:100%;height:100%;z-index:-1;"></div>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
@@ -150,19 +135,31 @@ particlesJS("particles-js", {
     "shape": { "type": "circle" },
     "opacity": { "value": 0.4 },
     "size": { "value": 3 },
-    "line_linked": { "enable": true, "distance": 150, "color": "#ff0000", "opacity": 0.4, "width": 1 },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ff0000",
+      "opacity": 0.4,
+      "width": 1
+    },
     "move": { "enable": true, "speed": 2, "direction": "none" }
   },
   "interactivity": {
-    "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
-    "modes": { "repulse": { "distance": 100 }, "push": { "particles_nb": 4 } }
+    "events": {
+      "onhover": { "enable": true, "mode": "repulse" },
+      "onclick": { "enable": true, "mode": "push" }
+    },
+    "modes": {
+      "repulse": { "distance": 100 },
+      "push": { "particles_nb": 4 }
+    }
   },
   "retina_detect": true
 });
 </script>
 
 <div class="floating-buttons">
-  <a href="https://open.spotify.com/artist/3mZWdB1lqbnwVVwMhn8X2r" target="_blank">🎵 Spotify</a>
+  <a href="https://open.spotify.com/intl-es/artist/3mZWdB1lqbnwVVwMhn8X2r" target="_blank">🎵 Spotify</a>
   <a href="https://www.instagram.com/hades.thc/" target="_blank">📸 Instagram</a>
   <a href="https://www.youtube.com/@hadesthc369" target="_blank">▶️ YouTube</a>
 </div>
@@ -173,22 +170,22 @@ particlesJS("particles-js", {
   <h1>369</h1>
   <h1>Un paso más</h1>
   <p class="subtext">Explora mi mundo: música, merch y emociones reales. Cada letra tiene historia.</p>
-  <button onclick="window.location.href='https://open.spotify.com/artist/3mZWdB1lqbnwVVwMhn8X2r'">Explorar mi mundo</button>
+  <button onclick="window.location.href='https://open.spotify.com/intl-es/artist/3mZWdB1lqbnwVVwMhn8X2r'">Explorar mi mundo</button>
 </header>
 
 <div class="spotify-profile">
   <h2 style="color: white;">Mi perfil en Spotify</h2>
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3mZWdB1lqbnwVVwMhn8X2r" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3mZWdB1lqbnwVVwMhn8X2r?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </div>
 
 <div class="spotify-player">
   <h2>Mi canción destacada</h2>
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7lYpukPIr6rmEnr6akxNY7" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7lYpukPIr6rmEnr6akxNY7?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </div>
 
 <div class="last-release">
   <h2>Último lanzamiento</h2>
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7wtuBZq9y9eShVq2ccs2V1" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7wtuBZq9y9eShVq2ccs2V1?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </div>
 
 <div class="last-release">
@@ -196,30 +193,14 @@ particlesJS("particles-js", {
   <iframe width="100%" height="352" style="border-radius:12px" src="https://www.youtube.com/embed/j3sqkxjQSlg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-<section class="comments">
+<div class="comments">
   <h2>Déjame un comentario</h2>
   <form>
     <textarea rows="5" placeholder="Escribe algo..."></textarea>
     <br>
     <input type="submit" value="Enviar" />
   </form>
-</section>
-
-<section style="margin-top: 4rem;">
-  <h2>Mi colección de gorras</h2>
-  <div class="merch-gallery">
-    <img src="assets/img/gorra1.png" alt="Gorra 1">
-    <img src="assets/img/gorra2.png" alt="Gorra 2">
-    <img src="assets/img/gorra3.png" alt="Gorra 3">
-    <img src="assets/img/gorra4.png" alt="Gorra 4">
-    <img src="assets/img/gorra5.png" alt="Gorra 5">
-    <img src="assets/img/gorra6.png" alt="Gorra 6">
-    <img src="assets/img/gorra7.png" alt="Gorra 7">
-  </div>
-  <div class="merch-button">
-    <a href="https://www.instagram.com/369_merch/" target="_blank">Ver más merch</a>
-  </div>
-</section>
+</div>
 
 <footer class="social-links">
   <a href="https://www.instagram.com/hades.thc/" target="_blank">Instagram</a>
