@@ -6,6 +6,44 @@
   <title>Hades THC - Un paso más</title>
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   <style>
+    .floating-buttons {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .floating-buttons a {
+      background: #ff0000;
+      color: white;
+      padding: 0.5rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 0 8px 8px 0;
+      font-family: Arial, sans-serif;
+    }
+    .floating-buttons a:hover {
+      background: white;
+      color: #000;
+    }
+    
+    .logo {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      box-shadow: 0 0 35px red, 0 0 60px red;
+      animation: appear 1.5s ease-out forwards;
+      opacity: 0;
+      margin-bottom: 1rem;
+    }
+    @keyframes appear {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
     body {
       background-color: #000;
       color: white;
@@ -38,42 +76,7 @@
       margin: 1.5rem 0;
       font-family: Arial, sans-serif;
     }
-    .logo {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      box-shadow: 0 0 35px red, 0 0 60px red;
-      animation: appear 1.5s ease-out forwards;
-      opacity: 0;
-      margin-bottom: 1rem;
-    }
-    @keyframes appear {
-      0% { transform: scale(0.7); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-    .floating-buttons {
-      position: fixed;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 1000;
-    }
-    .floating-buttons a {
-      background: #ff0000;
-      color: white;
-      padding: 0.5rem;
-      text-decoration: none;
-      font-size: 1.2rem;
-      border-radius: 0 8px 8px 0;
-      font-family: Arial, sans-serif;
-    }
-    .floating-buttons a:hover {
-      background: white;
-      color: #000;
-    }
+
     .spotify-player, .last-release {
       margin: 2rem auto;
       max-width: 800px;
@@ -136,17 +139,31 @@
       font-family: Arial, sans-serif;
       cursor: pointer;
     }
+
     @media (max-width: 600px) {
-      h1 { font-size: 2rem; }
-      button { font-size: 1rem; padding: 0.8rem 1.5rem; }
-      .merch-gallery { gap: 0.8rem; }
-      .merch-gallery img { max-width: 100%; }
-      .social-links a, .merch-button a { font-size: 1rem; margin: 0.4rem; }
+      h1 {
+        font-size: 2rem;
+      }
+      button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+      .merch-gallery {
+        gap: 0.8rem;
+      }
+      .merch-gallery img {
+        max-width: 100%;
+      }
+      .social-links a, .merch-button a {
+        font-size: 1rem;
+        margin: 0.4rem;
+      }
     }
   </style>
 </head>
 <body>
 
+<!-- particles.js container -->
 <div id="particles-js" style="position:fixed;width:100%;height:100%;z-index:-1;"></div>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
@@ -164,7 +181,11 @@ particlesJS("particles-js", {
       "opacity": 0.4,
       "width": 1
     },
-    "move": { "enable": true, "speed": 2, "direction": "none" }
+    "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "none"
+    }
   },
   "interactivity": {
     "events": {
@@ -231,8 +252,8 @@ particlesJS("particles-js", {
 </div>
 
 <div class="last-release">
-  <h2>Último lanzamiento</h2>
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7wtuBZq9y9eShVq2ccs2V1?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <h2>Último lanzamiento - Pensando en Ti</h2>
+  <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/7wtuBZq9y9eShVq2ccs2V1?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </div>
 
 <div class="last-release">
@@ -252,11 +273,11 @@ particlesJS("particles-js", {
 <section style="margin-top: 4rem;">
   <h2>Mi colección de merch</h2>
   <div class="merch-gallery">
-    <img src="assets/img/gorras/gorra1.png" alt="Gorra 1">
-    <img src="assets/img/gorras/gorra2.png" alt="Gorra 2">
-    <img src="assets/img/gorras/gorra3.png" alt="Gorra 3">
-    <img src="assets/img/gorras/gorra4.png" alt="Gorra 4">
-    <img src="assets/img/gorras/gorra5.png" alt="Gorra 5">
+    <img src="assets/img/gorra1.png" alt="Gorra 1">
+    <img src="assets/img/gorra2.png" alt="Gorra 2">
+    <img src="assets/img/gorra3.png" alt="Gorra 3">
+    <img src="assets/img/gorra4.png" alt="Gorra 4">
+    <img src="assets/img/gorra5.png" alt="Gorra 5">
   </div>
   <div class="merch-button">
     <a href="https://www.instagram.com/369_merch/" target="_blank">Ver más merch</a>
