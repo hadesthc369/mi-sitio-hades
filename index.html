@@ -17,19 +17,16 @@
     h1, h2 {
       color: #ff0000;
     }
-
     header img {
       width: 200px;
       border-radius: 50%;
       box-shadow: 0 0 25px red;
     }
-
     section {
       margin: 3rem auto;
       max-width: 900px;
       padding: 1rem;
     }
-
     iframe {
       border-radius: 12px;
       width: 100%;
@@ -37,66 +34,61 @@
       height: 352px;
     }
 
-    /* Gorras */
-    .gorras-section {
-      margin: 4rem auto;
-      padding: 2rem 1rem;
-    }
-    .gorras-grid {
+    /* Sección gorras responsiva */
+    .merch-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
+      padding: 0 1rem;
     }
-    .gorra-item {
-      background: #111;
-      border: 2px solid #ff0000;
+    .merch-gallery img {
+      width: 100%;
       border-radius: 12px;
-      padding: 1rem;
+      border: 2px solid #ff0000;
       box-shadow: 0 0 15px rgba(255,0,0,0.3);
     }
-    .gorra-item img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .gorra-item h3 {
-      margin: 0.8rem 0 0.4rem;
-      font-size: 1.2rem;
-      font-family: Arial, sans-serif;
-      color: #fff;
-    }
-    .gorra-item p {
-      font-family: Arial, sans-serif;
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-    .gorra-item a {
+    .merch-button a {
       display: inline-block;
-      margin-top: 0.8rem;
-      padding: 0.5rem 1rem;
-      background: #ff0000;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #ff0000;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 8px;
       font-family: Arial, sans-serif;
       transition: background 0.3s ease;
     }
-    .gorra-item a:hover {
+    .merch-button a:hover {
       background: darkred;
     }
 
-    @media (max-width: 600px) {
-      .gorra-item h3 { font-size: 1rem; }
-      .gorra-item p { font-size: 0.8rem; }
-      iframe { height: 280px; }
+    /* Floating buttons */
+    .floating-buttons {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .floating-buttons a {
+      background: #ff0000;
+      color: white;
+      padding: 0.5rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 0 8px 8px 0;
+      font-family: Arial, sans-serif;
+    }
+    .floating-buttons a:hover {
+      background: white;
+      color: #000;
     }
 
-    footer {
-      margin:3rem 0;
-      font-family:Arial, sans-serif;
-      font-size:0.9rem;
-      color:#aaa;
-    }
+    /* Footer redes sociales */
     footer a {
       color:red;
       text-decoration:none;
@@ -104,67 +96,86 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 600px) {
+      iframe { height: 280px; }
+      .merch-gallery img { max-width: 100%; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <img src="assets/img/logo.png" alt="Logo Hades THC" />
-    <h1>Hades THC</h1>
-    <p>Un paso más | Música & Merch</p>
-  </header>
+<!-- Botones flotantes -->
+<div class="floating-buttons">
+  <a href="https://open.spotify.com/intl-es/artist/3mZWdB1lqbnwVVwMhn8X2r" target="_blank">🎵 Spotify</a>
+  <a href="https://www.instagram.com/hades.thc/" target="_blank">📸 Instagram</a>
+  <a href="https://www.youtube.com/@hadesthc369" target="_blank">▶️ YouTube</a>
+</div>
 
-  <!-- Última canción -->
-  <section>
-    <h2>🎵 Mi última canción</h2>
-    <iframe src="https://open.spotify.com/embed/track/7lYpukPIr6rmEnr6akxNY7?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-  </section>
+<header>
+  <img src="assets/img/logo.png" alt="Logo Hades THC" />
+  <h1>Hades THC</h1>
+  <h1>369</h1>
+  <h1>Un paso más</h1>
+  <p class="subtext">Explora mi mundo: música, merch y emociones reales. Cada letra tiene historia.</p>
+  <button onclick="window.location.href='https://open.spotify.com/intl-es/artist/3mZWdB1lqbnwVVwMhn8X2r'">Explorar mi mundo</button>
+</header>
 
-  <!-- Último álbum -->
-  <section>
-    <h2>📀 Último álbum</h2>
-    <iframe src="https://open.spotify.com/embed/album/0tlnzKPEMBIepJxRspaZt5?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-  </section>
+<!-- Perfil Spotify -->
+<section class="spotify-profile">
+  <h2>Mi perfil en Spotify</h2>
+  <iframe src="https://open.spotify.com/embed/artist/3mZWdB1lqbnwVVwMhn8X2r?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+</section>
 
-  <!-- Último video de YouTube -->
-  <section>
-    <h2>🎬 Video más reciente</h2>
-    <iframe src="https://www.youtube.com/embed/j3sqkxjQSlg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </section>
+<!-- Última canción -->
+<section class="spotify-player">
+  <h2>Mi canción destacada</h2>
+  <iframe src="https://open.spotify.com/embed/track/7lYpukPIr6rmEnr6akxNY7?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+</section>
 
-  <!-- Catálogo de gorras -->
-  <section class="gorras-section">
-    <h2>🧢 Mi colección de gorras</h2>
-    <div class="gorras-grid">
-      <div class="gorra-item">
-        <img src="assets/img/gorra1.jpg" alt="Gorra Negra">
-        <h3>Mark I Black</h3>
-        <p>Edición clásica en negro, minimal y con poder.</p>
-        <a href="https://www.instagram.com/369_clothes/" target="_blank">Comprar</a>
-      </div>
-      <div class="gorra-item">
-        <img src="assets/img/gorra2.jpg" alt="Gorra Roja">
-        <h3>Mark I Red</h3>
-        <p>Rojo fuego para destacar en la calle.</p>
-        <a href="https://www.instagram.com/369_clothes/" target="_blank">Comprar</a>
-      </div>
-      <div class="gorra-item">
-        <img src="assets/img/gorra3.jpg" alt="Gorra Alien">
-        <h3>Alien Edition</h3>
-        <p>Inspirada en otro planeta 👽.</p>
-        <a href="https://www.instagram.com/369_clothes/" target="_blank">Comprar</a>
-      </div>
-    </div>
-  </section>
+<!-- Último álbum -->
+<section class="last-release">
+  <h2>Último lanzamiento</h2>
+  <iframe src="https://open.spotify.com/embed/album/0tlnzKPEMBIepJxRspaZt5?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Hades THC | Sígueme en 
-    <a href="https://www.instagram.com/hades.thc/" target="_blank">Instagram</a> | 
-    <a href="https://www.tiktok.com/@hadesthc" target="_blank">TikTok</a> | 
-    <a href="https://www.youtube.com/@hadesTHC" target="_blank">YouTube</a>
-  </footer>
+<!-- Último video -->
+<section class="last-release">
+  <h2>Video más reciente</h2>
+  <iframe src="https://www.youtube.com/embed/j3sqkxjQSlg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+
+<!-- Comentarios -->
+<div class="comments">
+  <h2>Déjame un comentario</h2>
+  <form>
+    <textarea rows="5" placeholder="Escribe algo..."></textarea>
+    <br>
+    <input type="submit" value="Enviar" />
+  </form>
+</div>
+
+<!-- Merch / Gorras -->
+<section>
+  <h2>Mi colección de merch</h2>
+  <div class="merch-gallery">
+    <img src="assets/img/merch1.png" alt="Merch 1">
+    <img src="assets/img/merch2.png" alt="Merch 2">
+    <img src="assets/img/merch3.png" alt="Merch 3">
+    <img src="assets/img/merch4.jpg" alt="Merch 4">
+    <img src="assets/img/merch5.png" alt="Merch 5">
+  </div>
+  <div class="merch-button">
+    <a href="https://www.instagram.com/369_clothes/" target="_blank">Ver más merch</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="social-links">
+  <a href="https://www.instagram.com/hades.thc/" target="_blank">Instagram</a>
+  <a href="https://www.tiktok.com/@hadesthc?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
+  <a href="https://www.youtube.com/@hadesTHC" target="_blank">YouTube</a>
+</footer>
 
 </body>
 </html>
