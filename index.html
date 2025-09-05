@@ -1,66 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hades THC - Un paso más</title>
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    /* ------------------- Reset y body ------------------- */
     * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family: 'UnifrakturCook', cursive; background: #000; color: #fff; line-height:1.5; scroll-behavior: smooth;}
+    body { font-family:'UnifrakturCook', cursive; background:#000; color:#fff; line-height:1.5; overflow-x:hidden; scroll-behavior: smooth;}
     a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
+    img { display:block; max-width:100%; }
 
-    /* ------------------- Header ------------------- */
-    header { text-align: center; padding: 2rem 1rem; position: relative; z-index: 2;}
-    .logo { width: 250px; height: 250px; border-radius: 50%; box-shadow: 0 0 35px red, 0 0 60px red; animation: appear 1.5s ease-out forwards; margin: auto; }
-    @keyframes appear { 0% { transform: scale(0.7); opacity:0;} 100% { transform: scale(1); opacity:1;} }
-    h1 { font-size: 3rem; color: #ff0000; margin: 0.5rem 0; }
-    .subtext { font-family: Arial, sans-serif; font-size:1.2rem; color:#ccc; max-width:600px; margin:auto; }
+    header { text-align:center; padding:5rem 1rem 3rem 1rem; position:relative; z-index:2;}
+    .logo { width:250px; height:250px; border-radius:50%; box-shadow:0 0 35px red,0 0 60px red; animation:appear 1.5s ease-out forwards; margin:auto; }
+    @keyframes appear {0%{transform:scale(0.7);opacity:0;}100%{transform:scale(1);opacity:1;}}
+    h1 { font-size:3rem; color:#ff0000; margin:0.5rem 0; }
+    .subtext { font-family:Arial,sans-serif; font-size:1.2rem; color:#ccc; max-width:600px; margin:auto; }
 
     button.cta { background:#ff0000; border:none; color:#fff; padding:1rem 2rem; font-size:1.1rem; border-radius:8px; cursor:pointer; margin-top:1.5rem; transition:0.3s; }
     button.cta:hover { background:#fff; color:#000; }
 
-    /* ------------------- Floating buttons ------------------- */
-    .floating-buttons { position: fixed; top:50%; left:0; transform:translateY(-50%); display:flex; flex-direction:column; gap:10px; z-index: 1000;}
+    .floating-buttons { position:fixed; top:50%; left:0; transform:translateY(-50%); display:flex; flex-direction:column; gap:10px; z-index:1000;}
     .floating-buttons a { background:#ff0000; color:#fff; padding:0.5rem; font-size:1.2rem; border-radius:0 8px 8px 0; display:flex; align-items:center; justify-content:center; transition:0.3s;}
     .floating-buttons a:hover { background:#fff; color:#000; }
 
-    /* ------------------- Secciones ------------------- */
-    section { padding: 3rem 1rem; max-width:900px; margin: auto; }
+    section { padding:5rem 1rem; max-width:900px; margin:auto; opacity:0; transform: translateY(50px); transition:0.8s ease-out; }
+    section.show { opacity:1; transform: translateY(0);}
     section h2 { font-size:2rem; color:#ff0000; margin-bottom:1rem;}
-    section p { font-family: Arial,sans-serif; font-size:1rem; color:#ccc; margin-bottom:1rem;}
+    section p { font-family:Arial,sans-serif; font-size:1rem; color:#ccc; margin-bottom:1rem;}
 
-    /* ------------------- Spotify / Video ------------------- */
     .spotify-player iframe, .last-release iframe, .video iframe { border-radius:12px; width:100%; max-width:800px; height:352px; }
 
-    /* ------------------- Merch ------------------- */
-    .merch-gallery { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:2rem; }
-    .merch-gallery img { width: 100%; max-width:250px; border:2px solid #ff0000; border-radius:12px; transition: transform 0.3s; }
-    .merch-gallery img:hover { transform: scale(1.05); box-shadow:0 0 20px #ff0000; }
-    .merch-button a { display:inline-block; margin-top:1rem; padding:0.8rem 1.5rem; background:#ff0000; color:#fff; border-radius:8px; transition:0.3s;}
-    .merch-button a:hover { background:#fff; color:#000; }
-
-    /* ------------------- Forms ------------------- */
     form input, form textarea { width:100%; padding:0.8rem; margin:0.5rem 0; border-radius:6px; border:none; font-family:Arial,sans-serif; }
     form button { background:#ff0000; color:#fff; border:none; padding:0.8rem 2rem; border-radius:6px; cursor:pointer; transition:0.3s;}
     form button:hover { background:#fff; color:#000; }
 
-    /* ------------------- Footer ------------------- */
     footer { text-align:center; padding:2rem 1rem; display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; border-top:1px solid #ff0000; margin-top:3rem;}
-    footer a { font-size:1.2rem; transition:0.3s; }
+    footer a { font-size:1.5rem; transition:0.3s; }
     footer a:hover { color:#ff0000; }
 
-    /* ------------------- Responsive ------------------- */
-    @media(max-width:600px){ h1{ font-size:2rem;} button.cta{ font-size:1rem; padding:0.8rem 1.5rem;} .merch-gallery img{ max-width:100%;} }
+    #particles-js { position:fixed; width:100%; height:100%; z-index:-1; top:0; left:0;}
+
+    @media(max-width:600px){
+      h1{ font-size:2rem;}
+      button.cta{ font-size:1rem; padding:0.8rem 1.5rem;} 
+    }
   </style>
 </head>
 <body>
 
-<!-- Particles -->
-<div id="particles-js" style="position:fixed;width:100%;height:100%;z-index:-1;"></div>
+<div id="particles-js"></div>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
 particlesJS("particles-js", {
@@ -75,14 +65,12 @@ particlesJS("particles-js", {
 });
 </script>
 
-<!-- Floating Buttons -->
 <div class="floating-buttons">
   <a href="https://open.spotify.com/intl-es/artist/3mZWdB1lqbnwVVwMhn8X2r" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
   <a href="https://www.instagram.com/hades.thc/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
   <a href="https://www.youtube.com/@hadesthc369" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
 </div>
 
-<!-- Header -->
 <header>
   <img src="assets/img/logo.png" alt="Logo Hades THC" class="logo">
   <h1>Hades THC</h1>
@@ -91,26 +79,22 @@ particlesJS("particles-js", {
   <button class="cta" onclick="window.location.href='https://open.spotify.com/intl-es/artist/3mZWdB1lqbnwVVwMhn8X2r'">Explorar mi mundo</button>
 </header>
 
-<!-- Spotify Profile -->
-<section>
+<section class="fade">
   <h2>Mi perfil en Spotify</h2>
   <iframe src="https://open.spotify.com/embed/artist/3mZWdB1lqbnwVVwMhn8X2r?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </section>
 
-<!-- Último lanzamiento -->
-<section class="last-release">
+<section class="fade last-release">
   <h2>Último lanzamiento</h2>
   <iframe src="https://open.spotify.com/embed/album/7wtuBZq9y9eShVq2ccs2V1?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </section>
 
-<!-- Video reciente -->
-<section class="video">
+<section class="fade video">
   <h2>Video más reciente</h2>
   <iframe src="https://www.youtube.com/embed/j3sqkxjQSlg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 
-<!-- Biografía -->
-<section>
+<section class="fade">
   <h2>Biografía</h2>
   <p>
     Hades THC es un artista independiente que fusiona emociones crudas con ritmos intensos. Su música navega entre el rap, R&B y reggaetón, explorando temas como la introspección, la oscuridad y la catarsis emocional. Cada letra representa un paso más en su camino artístico y personal.
@@ -121,31 +105,12 @@ particlesJS("particles-js", {
   </div>
 </section>
 
-<!-- Destacado canción -->
-<section class="spotify-player">
+<section class="fade spotify-player">
   <h2>Mi canción destacada</h2>
   <iframe src="https://open.spotify.com/embed/track/7lYpukPIr6rmEnr6akxNY7?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </section>
 
-<!-- Merch -->
-<section>
-  <h2>Mi colección de merch</h2>
-  <div class="merch-gallery">
-    <img src="assets/img/gorra1.png" alt="Gorra 1">
-    <img src="assets/img/gorra2.png" alt="Gorra 2">
-    <img src="assets/img/gorra3.png" alt="Gorra 3">
-    <img src="assets/img/gorra4.png" alt="Gorra 4">
-    <img src="assets/img/gorra5.png" alt="Gorra 5">
-    <img src="assets/img/gorra6.png" alt="Gorra 6">
-    <img src="assets/img/gorra7.png" alt="Gorra 7">
-  </div>
-  <div class="merch-button">
-    <a href="https://www.instagram.com/369_merch/" target="_blank">Ver más merch</a>
-  </div>
-</section>
-
-<!-- Suscripción -->
-<section>
+<section class="fade">
   <h2>Suscríbete a mi lista exclusiva</h2>
   <p>Recibe adelantos de mis canciones, ofertas de merch y lanzamientos antes que nadie.</p>
   <form action="https://formsubmit.co/ecastilo1008@gmail.com" method="POST">
@@ -156,12 +121,22 @@ particlesJS("particles-js", {
   </form>
 </section>
 
-<!-- Footer -->
 <footer>
   <a href="https://www.instagram.com/hades.thc/" target="_blank"><i class="fab fa-instagram"></i></a>
   <a href="https://www.tiktok.com/@hadesthc?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
   <a href="https://www.youtube.com/@hadesTHC" target="_blank"><i class="fab fa-youtube"></i></a>
 </footer>
+
+<script>
+// Animación fade-in al hacer scroll
+const faders = document.querySelectorAll('.fade');
+const appearOptions = { threshold: 0.3, rootMargin: "0px 0px -50px 0px" };
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => { if(entry.isIntersecting){entry.target.classList.add('show');appearOnScroll.unobserve(entry.target);} });
+}, appearOptions);
+
+faders.forEach(fader => { appearOnScroll.observe(fader); });
+</script>
 
 </body>
 </html>
