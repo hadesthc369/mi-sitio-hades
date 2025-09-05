@@ -17,16 +17,34 @@
     h1, h2 {
       color: #ff0000;
     }
-    /* Sección gorras */
+
+    header img {
+      width: 200px;
+      border-radius: 50%;
+      box-shadow: 0 0 25px red;
+    }
+
+    section {
+      margin: 3rem auto;
+      max-width: 900px;
+      padding: 1rem;
+    }
+
+    iframe {
+      border-radius: 12px;
+      width: 100%;
+      max-width: 100%;
+      height: 352px;
+    }
+
+    /* Gorras */
     .gorras-section {
       margin: 4rem auto;
-      max-width: 1000px;
       padding: 2rem 1rem;
     }
     .gorras-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
     }
@@ -35,7 +53,6 @@
       border: 2px solid #ff0000;
       border-radius: 12px;
       padding: 1rem;
-      width: 220px;
       box-shadow: 0 0 15px rgba(255,0,0,0.3);
     }
     .gorra-item img {
@@ -67,24 +84,53 @@
     .gorra-item a:hover {
       background: darkred;
     }
+
+    @media (max-width: 600px) {
+      .gorra-item h3 { font-size: 1rem; }
+      .gorra-item p { font-size: 0.8rem; }
+      iframe { height: 280px; }
+    }
+
+    footer {
+      margin:3rem 0;
+      font-family:Arial, sans-serif;
+      font-size:0.9rem;
+      color:#aaa;
+    }
+    footer a {
+      color:red;
+      text-decoration:none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
-    <img src="assets/img/logo.png" alt="Logo Hades THC" style="width:200px; border-radius:50%; box-shadow:0 0 25px red;" />
+    <img src="assets/img/logo.png" alt="Logo Hades THC" />
     <h1>Hades THC</h1>
     <p>Un paso más | Música & Merch</p>
   </header>
 
   <!-- Última canción -->
-  <section style="margin:3rem auto; max-width:800px;">
+  <section>
     <h2>🎵 Mi última canción</h2>
-    <iframe style="border-radius:12px" 
-      src="https://open.spotify.com/embed/track/7lYpukPIr6rmEnr6akxNY7?utm_source=generator" 
-      width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-      loading="lazy">
-    </iframe>
+    <iframe src="https://open.spotify.com/embed/track/7lYpukPIr6rmEnr6akxNY7?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+  </section>
+
+  <!-- Último álbum -->
+  <section>
+    <h2>📀 Último álbum</h2>
+    <iframe src="https://open.spotify.com/embed/album/0tlnzKPEMBIepJxRspaZt5?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+  </section>
+
+  <!-- Último video de YouTube -->
+  <section>
+    <h2>🎬 Video más reciente</h2>
+    <iframe src="https://www.youtube.com/embed/j3sqkxjQSlg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </section>
 
   <!-- Catálogo de gorras -->
@@ -112,9 +158,12 @@
     </div>
   </section>
 
-  <footer style="margin:3rem 0; font-family:Arial, sans-serif; font-size:0.9rem; color:#aaa;">
+  <!-- FOOTER -->
+  <footer>
     © 2025 Hades THC | Sígueme en 
-    <a href="https://www.instagram.com/hades.thc/" target="_blank" style="color:red;">Instagram</a>
+    <a href="https://www.instagram.com/hades.thc/" target="_blank">Instagram</a> | 
+    <a href="https://www.tiktok.com/@hadesthc" target="_blank">TikTok</a> | 
+    <a href="https://www.youtube.com/@hadesTHC" target="_blank">YouTube</a>
   </footer>
 
 </body>
