@@ -3,22 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hades THC - Un paso más</title>
+<title>Hades THC - 369 - Un paso más</title>
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:'UnifrakturCook', cursive; background:#000; color:#fff; overflow-x:hidden; scroll-behavior:smooth;}
-  a { text-decoration:none; color:inherit; }
+  body { font-family:'UnifrakturCook', cursive; background:#000; color:#fff; overflow-x:hidden; overflow-y:hidden; }
 
-  /* Floating buttons */
-  .floating-buttons { position:fixed; top:50%; left:0; transform:translateY(-50%); display:flex; flex-direction:column; gap:10px; z-index:1000;}
-  .floating-buttons a { background:#ff0000; color:#fff; padding:0.5rem; font-size:1.2rem; border-radius:0 8px 8px 0; display:flex; align-items:center; justify-content:center; transition:0.3s;}
-  .floating-buttons a:hover { background:#fff; color:#000; }
+  /* Contenedor de todas las secciones horizontales */
+  .slider { display:flex; width:700%; transition:transform 1s ease; height:100vh; }
 
-  /* Full-page sections */
-  section { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:2rem; transition:0.8s ease-out; opacity:0; transform: translateY(50px);}
-  section.show { opacity:1; transform: translateY(0);}
+  section { min-width:100vw; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:2rem; transition:0.5s; }
+
   h1, h2 { color:#ff0000; }
   h1 { font-size:4rem; margin:1rem 0; }
   h2 { font-size:2.5rem; margin:1rem 0; }
@@ -45,6 +41,11 @@
   footer a { font-size:1.8rem; transition:0.3s; }
   footer a:hover { color:#ff0000; }
 
+  /* Floating social buttons */
+  .floating-buttons { position:fixed; top:50%; left:0; transform:translateY(-50%); display:flex; flex-direction:column; gap:10px; z-index:1000;}
+  .floating-buttons a { background:#ff0000; color:#fff; padding:0.5rem; font-size:1.2rem; border-radius:0 8px 8px 0; display:flex; align-items:center; justify-content:center; transition:0.3s;}
+  .floating-buttons a:hover { background:#fff; color:#000; }
+
   /* Particles background */
   #particles-js { position:fixed; width:100%; height:100%; z-index:-1; top:0; left:0;}
 
@@ -57,7 +58,7 @@
 </head>
 <body>
 
-<!-- Particles.js container -->
+<!-- Particles.js -->
 <div id="particles-js"></div>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
@@ -80,64 +81,76 @@ particlesJS("particles-js", {
   <a href="https://www.youtube.com/@hadesthc369" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
 </div>
 
-<!-- Header Section -->
-<section class="fade">
-  <img src="assets/img/logo.png" alt="Logo Hades THC" class="logo">
-  <h1>Hades THC</h1>
-  <h1>369</h1>
-  <p>Explora mi mundo: música, merch y emociones reales.</p>
-  <button class="cta" onclick="window.location.href='https://open.spotify.com/intl-es/artist/3mZWdB1lqbnwVVwMhn8X2r'">Explorar mi mundo</button>
-</section>
+<!-- Horizontal slider -->
+<div class="slider">
+  <!-- Header -->
+  <section>
+    <img src="assets/img/logo.png" alt="Logo Hades THC" class="logo">
+    <h1>Hades THC</h1>
+    <h1>369</h1>
+    <p>Explora mi mundo: música, merch y emociones reales.</p>
+    <button class="cta" onclick="window.location.href='https://open.spotify.com/intl-es/artist/3mZWdB1lqbnwVVwMhn8X2r'">Explorar mi mundo</button>
+  </section>
 
-<!-- Spotify Profile Section -->
-<section class="fade">
-  <h2>Mi perfil en Spotify</h2>
-  <iframe src="https://open.spotify.com/embed/artist/3mZWdB1lqbnwVVwMhn8X2r?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</section>
+  <!-- Spotify Profile -->
+  <section>
+    <h2>Mi perfil en Spotify</h2>
+    <iframe src="https://open.spotify.com/embed/artist/3mZWdB1lqbnwVVwMhn8X2r?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </section>
 
-<!-- Last Release Section -->
-<section class="fade">
-  <h2>Último lanzamiento</h2>
-  <iframe src="https://open.spotify.com/embed/album/7wtuBZq9y9eShVq2ccs2V1?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</section>
+  <!-- Last Release -->
+  <section>
+    <h2>Último lanzamiento</h2>
+    <iframe src="https://open.spotify.com/embed/album/7wtuBZq9y9eShVq2ccs2V1?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </section>
 
-<!-- Latest Video Section -->
-<section class="fade">
-  <h2>Video más reciente</h2>
-  <iframe src="https://www.youtube.com/embed/j3sqkxjQSlg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</section>
+  <!-- Latest Video -->
+  <section>
+    <h2>Video más reciente</h2>
+    <iframe src="https://www.youtube.com/embed/j3sqkxjQSlg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
 
-<!-- Biography Section -->
-<section class="fade">
-  <h2>Biografía</h2>
-  <p>
-    Hades THC es un artista independiente que fusiona emociones crudas con ritmos intensos. Su música navega entre el rap, R&B y reggaetón, explorando temas como la introspección, la oscuridad y la catarsis emocional. Cada letra representa un paso más en su camino artístico y personal.
-  </p>
-  <div style="margin-top:1rem;">
-    <a href="https://www.instagram.com/369_clothes/" target="_blank">🛒 Ver merch en Instagram</a>
-    <a href="https://open.spotify.com/intl-es/artist/3mZWdB1lqbnwVVwMhn8X2r" target="_blank">🎧 Escuchar en Spotify</a>
-  </div>
-</section>
+  <!-- Biography -->
+  <section>
+    <h2>Biografía</h2>
+    <p>
+      Hades THC es un artista independiente que fusiona emociones crudas con ritmos intensos. Su música navega entre el rap, R&B y reggaetón, explorando temas como la introspección, la oscuridad y la catarsis emocional. Cada letra representa un paso más en su camino artístico y personal.
+    </p>
+    <div style="margin-top:1rem;">
+      <a href="https://www.instagram.com/369_clothes/" target="_blank">🛒 Ver merch en Instagram</a>
+      <a href="https://open.spotify.com/intl-es/artist/3mZWdB1lqbnwVVwMhn8X2r" target="_blank">🎧 Escuchar en Spotify</a>
+    </div>
+  </section>
 
-<!-- Featured Song Section -->
-<section class="fade">
-  <h2>Mi canción destacada</h2>
-  <iframe src="https://open.spotify.com/embed/track/7lYpukPIr6rmEnr6akxNY7?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</section>
+  <!-- Featured Song -->
+  <section>
+    <h2>Mi canción destacada</h2>
+    <iframe src="https://open.spotify.com/embed/track/7lYpukPIr6rmEnr6akxNY7?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </section>
 
-<!-- Subscribe Section -->
-<section class="fade">
-  <h2>Suscríbete a mi lista exclusiva</h2>
-  <p>Recibe adelantos de mis canciones, ofertas de merch y lanzamientos antes que nadie.</p>
-  <form action="https://formsubmit.co/ecastilo1008@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Tu nombre" required>
-    <input type="email" name="email" placeholder="Tu correo" required>
-    <input type="hidden" name="_captcha" value="false">
-    <button type="submit">Suscribirme</button>
-  </form>
-</section>
+  <!-- Subscribe -->
+  <section>
+    <h2>Suscríbete a mi lista exclusiva</h2>
+    <p>Recibe adelantos de mis canciones, ofertas de merch y lanzamientos antes que nadie.</p>
+    <form action="https://formsubmit.co/ecastilo1008@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
 
-<!-- Footer -->
+  <!-- Comments -->
+  <section>
+    <h2>Déjame un comentario</h2>
+    <form>
+      <textarea rows="5" placeholder="Escribe algo..."></textarea>
+      <br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</div>
+
 <footer>
   <a href="https://www.instagram.com/hades.thc/" target="_blank"><i class="fab fa-instagram"></i></a>
   <a href="https://www.tiktok.com/@hadesthc?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
@@ -145,13 +158,15 @@ particlesJS("particles-js", {
 </footer>
 
 <script>
-// Animación fade-in al hacer scroll
-const faders = document.querySelectorAll('.fade');
-const appearOptions = { threshold:0.3, rootMargin:"0px 0px -50px 0px" };
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-  entries.forEach(entry=>{ if(entry.isIntersecting){entry.target.classList.add('show'); observer.unobserve(entry.target);} });
-}, appearOptions);
-faders.forEach(fader=>{ appearOnScroll.observe(fader); });
+let currentIndex = 0;
+const slider = document.querySelector('.slider');
+const totalSections = slider.children.length;
+
+// Cambiar sección cada 8 segundos automáticamente
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % totalSections;
+  slider.style.transform = `translateX(-${currentIndex * 100}vw)`;
+}, 8000);
 </script>
 
 </body>
