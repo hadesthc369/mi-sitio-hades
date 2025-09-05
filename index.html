@@ -1,227 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Hades THC - Un paso más</title>
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'UnifrakturCook', cursive;
-    background: #000;
-    color: #fff;
-  }
-
-  header {
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-
-  .logo {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    box-shadow: 0 0 40px #ff0000, 0 0 70px #ff0000;
-    margin-bottom: 1rem;
-    animation: appear 1.5s ease-out forwards;
-    opacity: 0;
-  }
-
-  @keyframes appear {
-    0% { transform: scale(0.7); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-  }
-
-  h1 {
-    color: #ff0000;
-    margin: 0.3rem 0;
-    font-size: 2.8rem;
-  }
-
-  .subtext {
-    font-family: Arial, sans-serif;
-    font-size: 1.1rem;
-    color: #ccc;
-    margin-bottom: 2rem;
-  }
-
-  button {
-    background: #ff0000;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-family: Arial, sans-serif;
-  }
-
-  button:hover {
-    background: #e60000;
-  }
-
-  .floating-buttons {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 1000;
-  }
-
-  .floating-buttons a {
-    display: inline-block;
-    padding: 0.6rem 1rem;
-    background: #ff0000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 0 8px 8px 0;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-
-  .floating-buttons a:hover {
-    background: #fff;
-    color: #000;
-  }
-
-  section {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 2rem;
-    border-radius: 12px;
-    background: #111;
-    border: 2px solid #ff0000;
-  }
-
-  section h2 {
-    color: #ff0000;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  section p {
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    color: #ccc;
-    line-height: 1.6;
-  }
-
-  .spotify-player iframe,
-  .last-release iframe,
-  .video iframe {
-    width: 100%;
-    height: 352px;
-    border-radius: 12px;
-    border: none;
-  }
-
-  .comments form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .comments textarea {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ff0000;
-    background: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-  }
-
-  .comments button {
-    width: fit-content;
-    align-self: flex-start;
-  }
-
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #111;
-    border-top: 2px solid #ff0000;
-  }
-
-  footer a {
-    color: #fff;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-
-  footer a:hover {
-    color: #ff0000;
-  }
-
-  @media (max-width: 600px) {
-    h1 { font-size: 2rem; }
-    .logo { width: 180px; height: 180px; }
-    button { font-size: 1rem; padding: 0.8rem 1.5rem; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hades THC - Un paso más</title>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: 'UnifrakturCook', cursive;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 2rem 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #ff0000;
+      margin: 0.5rem 0;
+    }
+    .subtext {
+      font-size: 1.2rem;
+      font-family: Arial, sans-serif;
+      color: #ccc;
+    }
+    button {
+      background: #ff0000;
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 1.5rem 0;
+      font-family: Arial, sans-serif;
+    }
+    .logo {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      box-shadow: 0 0 35px red, 0 0 60px red;
+      animation: appear 1.5s ease-out forwards;
+      opacity: 0;
+      margin-bottom: 1rem;
+    }
+    @keyframes appear {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .floating-buttons {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .floating-buttons a {
+      background: #ff0000;
+      color: white;
+      padding: 0.5rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 0 8px 8px 0;
+      font-family: Arial, sans-serif;
+    }
+    .floating-buttons a:hover {
+      background: white;
+      color: #000;
+    }
+    .spotify-player, .last-release {
+      margin: 2rem auto;
+      max-width: 800px;
+      width: 90%;
+    }
+    .merch-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      max-width: 1000px;
+      padding: 0 1rem;
+    }
+    .merch-gallery img {
+      width: 100%;
+      max-width: 250px;
+      border: 2px solid #ff0000;
+      border-radius: 12px;
+    }
+    .social-links, .comments, .merch-button {
+      margin: 3rem 0 2rem;
+      padding: 0 1rem;
+    }
+    .social-links a, .merch-button a {
+      display: inline-block;
+      margin: 0.5rem;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-family: Arial, sans-serif;
+    }
+    .merch-button a {
+      padding: 0.8rem 1.5rem;
+      background-color: #ff0000;
+      border-radius: 8px;
+    }
+    .social-links a:hover, .merch-button a:hover {
+      text-decoration: underline;
+    }
+    .comments form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .comments textarea {
+      width: 100%;
+      padding: 1rem;
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: none;
+    }
+    .comments input[type="submit"] {
+      background-color: #ff0000;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
+<div id="particles-js" style="position:fixed;width:100%;height:100%;z-index:-1;"></div>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 80 },
+    "color": { "value": "#ff0000" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.4 },
+    "size": { "value": 3 },
+    "line_linked": { "enable": true, "distance": 150, "color": "#ff0000", "opacity": 0.4, "width": 1 },
+    "move": { "enable": true, "speed": 2, "direction": "none" }
+  },
+  "interactivity": {
+    "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
+    "modes": { "repulse": { "distance": 100 }, "push": { "particles_nb": 4 } }
+  },
+  "retina_detect": true
+});
+</script>
+
 <div class="floating-buttons">
-  <a href="https://open.spotify.com/intl-es/artist/3mZWdB1lqbnwVVwMhn8X2r" target="_blank">🎵 Spotify</a>
+  <a href="https://open.spotify.com/artist/3mZWdB1lqbnwVVwMhn8X2r" target="_blank">🎵 Spotify</a>
   <a href="https://www.instagram.com/hades.thc/" target="_blank">📸 Instagram</a>
   <a href="https://www.youtube.com/@hadesthc369" target="_blank">▶️ YouTube</a>
 </div>
 
 <header>
-  <img src="assets/img/logo.png" alt="Logo Hades THC" class="logo">
+  <img src="assets/img/logo.png" alt="Logo Hades THC" class="logo" />
   <h1>Hades THC</h1>
   <h1>369</h1>
   <h1>Un paso más</h1>
   <p class="subtext">Explora mi mundo: música, merch y emociones reales. Cada letra tiene historia.</p>
-  <button onclick="window.location.href='https://open.spotify.com/intl-es/artist/3mZWdB1lqbnwVVwMhn8X2r'">Explorar mi mundo</button>
+  <button onclick="window.location.href='https://open.spotify.com/artist/3mZWdB1lqbnwVVwMhn8X2r'">Explorar mi mundo</button>
 </header>
 
-<section>
-  <h2>Mi perfil en Spotify</h2>
-  <iframe src="https://open.spotify.com/embed/artist/3mZWdB1lqbnwVVwMhn8X2r?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-</section>
+<div class="spotify-profile">
+  <h2 style="color: white;">Mi perfil en Spotify</h2>
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3mZWdB1lqbnwVVwMhn8X2r" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
 
-<section>
+<div class="spotify-player">
   <h2>Mi canción destacada</h2>
-  <div class="spotify-player">
-    <iframe src="https://open.spotify.com/embed/track/7lYpukPIr6rmEnr6akxNY7?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-  </div>
-</section>
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7lYpukPIr6rmEnr6akxNY7" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
 
-<section>
+<div class="last-release">
   <h2>Último lanzamiento</h2>
-  <div class="last-release">
-    <iframe src="https://open.spotify.com/embed/album/7wtuBZq9y9eShVq2ccs2V1?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-  </div>
-</section>
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7wtuBZq9y9eShVq2ccs2V1" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
 
-<section>
+<div class="last-release">
   <h2>Video más reciente</h2>
-  <div class="video">
-    <iframe src="https://www.youtube.com/embed/j3sqkxjQSlg?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</section>
+  <iframe width="100%" height="352" style="border-radius:12px" src="https://www.youtube.com/embed/j3sqkxjQSlg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <section class="comments">
   <h2>Déjame un comentario</h2>
   <form>
-    <textarea placeholder="Escribe algo..."></textarea>
-    <button type="submit">Enviar</button>
+    <textarea rows="5" placeholder="Escribe algo..."></textarea>
+    <br>
+    <input type="submit" value="Enviar" />
   </form>
 </section>
 
-<footer>
+<section style="margin-top: 4rem;">
+  <h2>Mi colección de gorras</h2>
+  <div class="merch-gallery">
+    <img src="assets/img/gorra1.png" alt="Gorra 1">
+    <img src="assets/img/gorra2.png" alt="Gorra 2">
+    <img src="assets/img/gorra3.png" alt="Gorra 3">
+    <img src="assets/img/gorra4.png" alt="Gorra 4">
+    <img src="assets/img/gorra5.png" alt="Gorra 5">
+    <img src="assets/img/gorra6.png" alt="Gorra 6">
+    <img src="assets/img/gorra7.png" alt="Gorra 7">
+  </div>
+  <div class="merch-button">
+    <a href="https://www.instagram.com/369_merch/" target="_blank">Ver más merch</a>
+  </div>
+</section>
+
+<footer class="social-links">
   <a href="https://www.instagram.com/hades.thc/" target="_blank">Instagram</a>
   <a href="https://www.tiktok.com/@hadesthc?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
   <a href="https://www.youtube.com/@hadesTHC" target="_blank">YouTube</a>
