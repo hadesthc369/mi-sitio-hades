@@ -14,23 +14,19 @@
       padding: 0;
       text-align: center;
     }
-
     header {
       padding: 2rem 1rem;
     }
-
     h1 {
       font-size: 3rem;
       color: #ff0000;
       margin: 0.5rem 0;
     }
-
     .subtext {
       font-size: 1.2rem;
       font-family: Arial, sans-serif;
       color: #ccc;
     }
-
     button {
       background: #ff0000;
       border: none;
@@ -42,7 +38,6 @@
       margin: 1.5rem 0;
       font-family: Arial, sans-serif;
     }
-
     .logo {
       width: 300px;
       height: 300px;
@@ -52,12 +47,10 @@
       opacity: 0;
       margin-bottom: 1rem;
     }
-
     @keyframes appear {
       0% { transform: scale(0.7); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
     }
-
     .floating-buttons {
       position: fixed;
       top: 50%;
@@ -68,7 +61,6 @@
       gap: 10px;
       z-index: 1000;
     }
-
     .floating-buttons a {
       background: #ff0000;
       color: white;
@@ -78,18 +70,15 @@
       border-radius: 0 8px 8px 0;
       font-family: Arial, sans-serif;
     }
-
     .floating-buttons a:hover {
       background: white;
       color: #000;
     }
-
     .spotify-player, .last-release {
       margin: 2rem auto;
       max-width: 800px;
       width: 90%;
     }
-
     .merch-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -99,19 +88,16 @@
       max-width: 1000px;
       padding: 0 1rem;
     }
-
     .merch-gallery img {
       width: 100%;
       max-width: 250px;
       border: 2px solid #ff0000;
       border-radius: 12px;
     }
-
     .social-links, .comments, .merch-button {
       margin: 3rem 0 2rem;
       padding: 0 1rem;
     }
-
     .social-links a, .merch-button a {
       display: inline-block;
       margin: 0.5rem;
@@ -120,22 +106,18 @@
       font-size: 1.2rem;
       font-family: Arial, sans-serif;
     }
-
     .merch-button a {
       padding: 0.8rem 1.5rem;
       background-color: #ff0000;
       border-radius: 8px;
     }
-
     .social-links a:hover, .merch-button a:hover {
       text-decoration: underline;
     }
-
     .comments form {
       max-width: 500px;
       margin: 0 auto;
     }
-
     .comments textarea {
       width: 100%;
       padding: 1rem;
@@ -145,7 +127,6 @@
       border-radius: 8px;
       border: none;
     }
-
     .comments input[type="submit"] {
       background-color: #ff0000;
       color: white;
@@ -155,10 +136,10 @@
       font-family: Arial, sans-serif;
       cursor: pointer;
     }
-
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
       button { font-size: 1rem; padding: 0.8rem 1.5rem; }
+      .merch-gallery { gap: 0.8rem; }
       .merch-gallery img { max-width: 100%; }
       .social-links a, .merch-button a { font-size: 1rem; margin: 0.4rem; }
     }
@@ -186,8 +167,14 @@ particlesJS("particles-js", {
     "move": { "enable": true, "speed": 2, "direction": "none" }
   },
   "interactivity": {
-    "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
-    "modes": { "repulse": { "distance": 100 }, "push": { "particles_nb": 4 } }
+    "events": {
+      "onhover": { "enable": true, "mode": "repulse" },
+      "onclick": { "enable": true, "mode": "push" }
+    },
+    "modes": {
+      "repulse": { "distance": 100 },
+      "push": { "particles_nb": 4 }
+    }
   },
   "retina_detect": true
 });
@@ -245,7 +232,7 @@ particlesJS("particles-js", {
 
 <div class="last-release">
   <h2>Último lanzamiento</h2>
-  <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/7wtuBZq9y9eShVq2ccs2V1?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7wtuBZq9y9eShVq2ccs2V1?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </div>
 
 <div class="last-release">
@@ -265,11 +252,11 @@ particlesJS("particles-js", {
 <section style="margin-top: 4rem;">
   <h2>Mi colección de merch</h2>
   <div class="merch-gallery">
-    <img src="assets/img/gorras/gorra1.PNG" alt="Gorra 1">
-    <img src="assets/img/gorras/gorra2.PNG" alt="Gorra 2">
-    <img src="assets/img/gorras/gorra3.PNG" alt="Gorra 3">
-    <img src="assets/img/gorras/gorra4.PNG" alt="Gorra 4">
-    <img src="assets/img/gorras/gorra5.PNG" alt="Gorra 5">
+    <img src="assets/img/gorras/gorra1.png" alt="Gorra 1">
+    <img src="assets/img/gorras/gorra2.png" alt="Gorra 2">
+    <img src="assets/img/gorras/gorra3.png" alt="Gorra 3">
+    <img src="assets/img/gorras/gorra4.png" alt="Gorra 4">
+    <img src="assets/img/gorras/gorra5.png" alt="Gorra 5">
   </div>
   <div class="merch-button">
     <a href="https://www.instagram.com/369_merch/" target="_blank">Ver más merch</a>
